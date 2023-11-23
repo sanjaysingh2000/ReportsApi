@@ -9,11 +9,11 @@ import com.example.demo1.entity.EligibilityDetails;
 
 public interface EligibilityDetailsRepo extends JpaRepository<EligibilityDetails, Integer>{
 
-	@Query("select distinctt(planName from EligibilityDetails")
+	@Query("select distinct(planName) from EligibilityDetails")
 	public List<String> findPlanNames();
 	
 	
-	@Query("select distinct(planStatus from EligibilityDetails")
+	@Query("select distinct(planStatus) from EligibilityDetails")
 	public List<String> findPlanStatus();
 	
 	
